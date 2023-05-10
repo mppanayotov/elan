@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ *\
+	cards-alt
+\* ------------------------------------------------------------ */
+.cards-alt {
+	padding: 100px 50px 0;
+	margin: -100px -50px 0;
+	min-height: 564px;
+	overflow-x: auto;
+
+	.cards__inner {
+		display: flex;
+		justify-content: space-between;
+		padding-right: 50px;
+		min-width: 1322px;
+
+		@include breakpoint-down(mobile) {
+			padding-left: 38px;
+			padding-right: 88px;
+			min-width: 1212px;
+		}
+	}
+
+	.card-alt+.card-alt {
+		@include breakpoint-down(mobile) {
+			margin-left: 18px;
+		}
+	}
+}

@@ -1,0 +1,181 @@
+/* ------------------------------------------------------------ *\
+	card-alt
+\* ------------------------------------------------------------ */
+.card-alt {
+	position: relative;
+	display: flex;
+	border-radius: 18px;
+	width: 100%;
+	max-width: 179px;
+	max-height: 273px;
+	height: 447px;
+	flex: 0 1 627px;
+	transition: transform 0.5s ease-out, border-color 0.5s ease-out, border-radius 0.5s ease-out, max-width 0.5s ease-out, max-height 0.5s ease-out, background-color 0.5s ease-out, box-shadow 0.5s ease-out, color 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
+	cursor: pointer;
+
+	h3 {
+		margin-top: auto;
+		margin-bottom: 0;
+		padding-bottom: 24px;
+		width: 100%;
+		max-width: 100%;
+		min-width: 255px;
+		flex: 0 0 auto;
+		max-height: 100%;
+		transform: translate(-24px, -4px) scale(0.625);
+		transform-origin: 0% 0%;
+		transition: transform 0.5s ease-out, border-color 0.5s ease-out, border-radius 0.5s ease-out, max-width 0.5s ease-out, max-height 0.5s ease-out, background-color 0.5s ease-out, box-shadow 0.5s ease-out, color 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
+	}
+
+	p {
+		opacity: 0;
+		min-width: 255px;
+		visibility: hidden;
+		pointer-events: none;
+		color: #797D84;
+		max-height: 0%;
+		transition: transform 0.5s ease-out, border-color 0.5s ease-out, border-radius 0.5s ease-out, max-width 0.5s ease-out, max-height 0.5s ease-out, background-color 0.5s ease-out, box-shadow 0.5s ease-out, color 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
+	}
+
+	.card__glow {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: transform 0.5s ease-out, border-color 0.5s ease-out, border-radius 0.5s ease-out, max-width 0.5s ease-out, max-height 0.5s ease-out, background-color 0.5s ease-out, box-shadow 0.5s ease-out, color 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
+	}
+
+	.card__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: transform 0.5s ease-out, border-color 0.5s ease-out, border-radius 0.5s ease-out, max-width 0.5s ease-out, max-height 0.5s ease-out, background-color 0.5s ease-out, box-shadow 0.5s ease-out, color 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out, flex 0.5s ease-out;
+	}
+
+	.card__icon svg {
+		max-width: 304px;
+	}
+
+	.card__image {
+		position: relative;
+		width: 100%;
+		max-width: 2px;
+		flex: 0 0 304px;
+		max-height: 100%;
+		background-color: #F7F7F7;
+		overflow: hidden;
+		border-radius: 18px 0 0 18px;
+		background-image: linear-gradient(180deg, rgba(2, 239, 163, .63) 0%, rgba(15, 81, 250, 0.67) 100%);
+		transition: transform 0.5s ease-out, border-color 0.5s ease-out, border-radius 0.5s ease-out, max-width 0.5s ease-out, max-height 0.5s ease-out, background-color 0.5s ease-out, box-shadow 0.5s ease-out, color 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
+	}
+
+	.card__content {
+		position: relative;
+		padding: 47px 34px 40px;
+		background-color: #F7F7F7;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		border-radius: 0 18px 18px 0;
+	}
+
+	.card__number {
+		transform: translate(-24px, -42px);
+		width: 100%;
+		max-width: 100%;
+		flex: 1 0 100%;
+		max-height: 100%;
+		transition: transform 0.5s ease-out, border-color 0.5s ease-out, border-radius 0.5s ease-out, max-width 0.5s ease-out, max-height 0.5s ease-out, background-color 0.5s ease-out, box-shadow 0.5s ease-out, color 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out, flex 0.6s ease-out;
+	}
+
+	.card__number svg {
+		transform-origin: 0% 0%;
+		transform: scale(0.6111111111111112);
+	}
+}
+
+/*  active state  */
+.card-alt.is-active {
+	max-height: 447px;
+	max-width: 627px;
+	transform: translateY(-42px);
+
+	@include breakpoint-down(mobile) {
+		max-width: 258px;
+		max-height: 563px;
+		height: 563px;
+		display: block;
+		cursor: auto;
+	}
+
+	h3 {
+		transform: none;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 0;
+			font-size: 22px;
+			line-height: 1.27;
+			min-width: 192px;
+		}
+	}
+
+	p {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		max-height: 100%;
+
+		@include breakpoint-down(mobile) {
+			min-width: 192px;
+		}
+	}
+
+	.card__content {
+		@include breakpoint-down(mobile) {
+			max-height: 325px;
+			padding: 37px 31px;
+			border-radius: 0 0 18px 18px;
+			overflow-y: auto;
+		}
+	}
+
+	.card__image {
+		max-width: 304px;
+
+		@include breakpoint-down(mobile) {
+			max-width: 256px;
+			height: 239px;
+			border-radius: 18px 18px 0 0;
+		}
+	}
+
+	.card__icon {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+
+		@include breakpoint-down(mobile) {
+			transform: translate(-50%, -50%) scale(0.9);
+		}
+	}
+
+	.card__number {
+		transform: none;
+		flex: 0 1 50%;
+		transition: transform .5s ease-out, border-color .5s ease-out, border-radius .5s ease-out, max-width .5s ease-out, max-height .5s ease-out, background-color .5s ease-out, box-shadow .5s ease-out, color .5s ease-out, opacity .5s ease-out, visibility .5s ease-out, flex 0.6s linear;
+
+		@include breakpoint-down(mobile) {
+			padding-bottom: 5px;
+			flex: 0 1 0%;
+		}
+	}
+
+	.card__glow {
+		opacity: 0.4;
+		visibility: visible;
+		pointer-events: auto;
+	}
+}

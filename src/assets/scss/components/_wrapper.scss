@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------ *\
+	Wrapper
+\* ------------------------------------------------------------ */
+.wrapper {
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+	background-color: #212325;
+}
+
+/*  wrapper--gradient  */
+.wrapper--gradient {
+	padding-bottom: 8px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 8px;
+		background-image: linear-gradient(270deg, #02efa3 0%, #0f51fa 100%);
+	}
+}
+
+/*  wrapper--full  */
+.wrapper--full {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+}

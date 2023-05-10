@@ -1,0 +1,86 @@
+/* ------------------------------------------------------------ *\
+	socials
+\* ------------------------------------------------------------ */
+.socials {
+	ul {
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+
+		@include breakpoint-down(mobile) {
+			display: block;
+		}
+	}
+
+	li {
+		width: 100%;
+		max-width: 33.33%;
+		flex: 0 1 33.33%;
+
+		@include breakpoint-down(mobile) {
+			max-width: none;
+		}
+	}
+
+	li+li {
+		margin-left: 16px;
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
+			margin-top: 29px;
+		}
+	}
+
+	svg {
+		margin-top: -6px;
+		margin-right: 6px;
+
+		@include breakpoint-down(small-desktop) {
+			margin-right: 0;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-right: 6px;
+		}
+	}
+
+	a {
+		width: 100%;
+		white-space: nowrap;
+	}
+}
+
+/*  socials--alt  */
+.socials--alt {
+	ul {
+		@include breakpoint-down(mobile) {
+			display: flex;
+		}
+	}
+
+	li {
+		@include breakpoint-down(mobile) {
+			max-width: 33.33%;
+		}
+	}
+
+	li+li {
+		@include breakpoint-down(mobile) {
+			margin-top: 0;
+			margin-left: 16px;
+		}
+	}
+
+	a {
+		@include breakpoint-down(mobile) {
+			font-size: 0;
+		}
+	}
+
+	svg {
+		@include breakpoint-down(mobile) {
+			margin-top: 3px;
+			margin-bottom: 1px;
+		}
+	}
+}

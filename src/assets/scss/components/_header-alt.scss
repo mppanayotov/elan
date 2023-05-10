@@ -1,0 +1,15 @@
+/* ------------------------------------------------------------ *\
+	Header-alt
+\* ------------------------------------------------------------ */
+.header-alt {
+	background-color: #222325;
+	padding: 60px 0;
+
+	@include breakpoint-down(mobile) {
+		padding: 51px 0;
+	}
+
+	.header__logo {
+		display: inline-block;
+	}
+}

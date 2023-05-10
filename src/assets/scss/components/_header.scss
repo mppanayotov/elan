@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------ *\
+	header
+\* ------------------------------------------------------------ */
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	padding: 60px 16px;
+	z-index: 10;
+	pointer-events: none;
+
+	@include breakpoint-down(tablet) {
+		padding: 51px 0;
+	}
+
+	.header__cols {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.header__logo {
+		position: relative;
+		width: 100%;
+		max-width: 133px;
+		flex: 0 1 133px;
+		max-height: 100%;
+		z-index: 2;
+		pointer-events: auto;
+	}
+
+	.header__nav {
+		margin-top: 9px;
+		width: auto;
+		max-width: 100%;
+		flex: 0 1 auto;
+		max-height: 100%;
+		pointer-events: auto;
+	}
+}

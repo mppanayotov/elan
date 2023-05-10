@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+	form
+\* ------------------------------------------------------------ */
+.form {
+	font: inherit;
+
+	.form__label {
+		display: block;
+		font-weight: 700;
+		margin-bottom: 8px;
+	}
+
+	.form__foot {
+		padding-bottom: 32px;
+	}
+
+	.form__actions {
+		text-align: center;
+	}
+
+	.form__controls {
+		position: relative;
+	}
+
+	.form__search {
+		position: absolute;
+		right: 20px;
+		top: 10px;
+
+		@include breakpoint-down(small-desktop) {
+			top: 6px;
+		}
+
+		@include breakpoint-down(mobile) {
+			top: 10px;
+		}
+	}
+
+	.form__search:hover,
+	.form__search:focus,
+	.form__search:active {
+		opacity: .5;
+	}
+
+	.form__search:hover+.form__field,
+	.form__search:focus+.form__field,
+	.form__search:active+.form__field {
+		border-color: rgba(15, 81, 250, 1);
+		background-color: #fff;
+		box-shadow: 1px 1px 2px 0px rgba(15, 81, 250, 0.5), 1px 1px 2px 0px rgba(15, 81, 250, 0.5) inset;
+	}
+
+	.form__search:before {
+		content: '';
+		position: absolute;
+		top: -10px;
+		bottom: -22px;
+		left: -22px;
+		right: -22px;
+		border-radius: 100px 100px;
+
+		@include breakpoint-down(small-desktop) {
+			top: -6px;
+			bottom: -9px;
+		}
+
+		@include breakpoint-down(mobile) {
+			top: -10px;
+			bottom: -20px;
+		}
+	}
+}

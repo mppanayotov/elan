@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------ *\
+	section-article
+\* ------------------------------------------------------------ */
+.section-article {
+	position: relative;
+	margin-top: -$header-height;
+	padding-top: $header-height;
+	background-color: #212325;
+
+	h1,
+	h2 {
+		font-size: 62px;
+		letter-spacing: -0.01em;
+		line-height: 1;
+
+		@include breakpoint-down(small-desktop) {
+			font-size: 24px;
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: 62px;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			font-size: 56px;
+		}
+	}
+
+	.section__intro {
+		padding-top: 93px;
+	}
+
+	.section__intro p {
+		position: relative;
+		color: #797D84;
+		text-transform: uppercase;
+		margin-bottom: 90px;
+		font-family: $ff-serif;
+		font-size: 15px;
+		z-index: 1;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 80px;
+		}
+	}
+
+	.section__main {
+		padding-bottom: 181px;
+		background-color: #F7F7F7;
+
+		@include breakpoint-down(small-desktop) {
+			padding-bottom: 120px;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding-bottom: 172px;
+		}
+	}
+}

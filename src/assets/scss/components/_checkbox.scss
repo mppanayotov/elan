@@ -1,0 +1,56 @@
+/* ------------------------------------------------------------ *\
+	Checkbox
+\* ------------------------------------------------------------ */
+.checkbox {
+	position: relative;
+	margin-bottom: 16px;
+	border: none;
+	border-radius: 0;
+	width: 100%;
+	min-height: 16px;
+	box-shadow: none;
+	font: inherit;
+
+	input {
+		display: none;
+	}
+
+	label {
+		padding: 0 0 0 28px;
+		display: block;
+	}
+
+	label:before {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: 0;
+		width: 16px;
+		height: 16px;
+		border: 1px solid #797d84;
+		transition: transform .3s ease-out, border-color .3s ease-out, border-radius .3s ease-out, max-width .3s ease-out, max-height .3s ease-out, background-color .3s ease-out, box-shadow .3s ease-out, color .3s ease-out, opacity .3s ease-out, visibility .3s ease-out;
+	}
+
+	label:after {
+		content: '';
+		position: absolute;
+		top: 4px;
+		left: 2px;
+		width: 18px;
+		height: 15px;
+		background-image: url(../images/svg/check.svg);
+		background-size: auto auto;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(-9%, -33%);
+		transition: transform .3s ease-out, border-color .3s ease-out, border-radius .3s ease-out, max-width .3s ease-out, max-height .3s ease-out, background-color .3s ease-out, box-shadow .3s ease-out, color .3s ease-out, opacity .3s ease-out, visibility .3s ease-out;
+	}
+
+	input:checked+label:after {
+		opacity: 1;
+		visibility: visible;
+		transform: none;
+	}
+}

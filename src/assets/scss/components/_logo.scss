@@ -1,0 +1,16 @@
+/* ------------------------------------------------------------ *\
+	logo
+\* ------------------------------------------------------------ */
+.logo {
+	display: block;
+	font-size: 0;
+	text-decoration: none;
+	color: #E3E9E9;
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+		color: #E3E9E9;
+	}
+}

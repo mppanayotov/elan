@@ -1,0 +1,55 @@
+/* ------------------------------------------------------------ *\
+	Main
+\* ------------------------------------------------------------ */
+.main {
+	position: relative;
+
+	.main__glow {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 678px;
+	}
+}
+
+/*  main--full  */
+.main--full {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include breakpoint-down(mobile) {
+		padding: 0;
+	}
+
+	.main__inner {
+		margin: auto;
+		width: 100%;
+		max-width: 100%;
+		flex: 0 1 0%;
+
+		@include breakpoint-down(mobile) {
+			position: relative;
+			flex: 0 1 100%;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+
+/*  main--alt  */
+.main--alt {
+	padding-top: $header-height;
+
+	@include breakpoint-down(tablet) {
+		padding-top: $header-mobile-height;
+	}
+}

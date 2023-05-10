@@ -1,0 +1,65 @@
+/* ------------------------------------------------------------ *\
+	section-tiles
+\* ------------------------------------------------------------ */
+.section-tiles {
+	position: relative;
+	background-color: #212325;
+
+	h1,
+	h2 {
+		font-size: 62px;
+		letter-spacing: -0.01em;
+		line-height: 1;
+		color: #F7F7F7;
+
+		@include breakpoint-down(small-desktop) {
+			font-size: 24px;
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: 62px;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			font-size: 56px;
+		}
+	}
+
+	.section__cols {
+		position: relative;
+		top: -53px;
+		display: flex;
+		justify-content: space-between;
+
+		@include breakpoint-down(small-desktop) {
+			margin-bottom: -53px;
+		}
+
+		@include breakpoint-down(mobile) {
+			top: -50px;
+			margin-bottom: -32px;
+			display: block;
+		}
+	}
+
+	.section__col {
+		width: 100%;
+		max-width: 33.33%;
+		flex: 0 1 33.33%;
+		max-height: 100%;
+
+		@include breakpoint-down(mobile) {
+			max-width: none;
+			padding: 0;
+		}
+	}
+
+	.section__col+.section__col {
+		margin-left: 20px;
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
+			margin-top: 62px;
+		}
+	}
+}

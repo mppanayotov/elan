@@ -1,0 +1,68 @@
+/* ------------------------------------------------------------ *\
+	glow
+\* ------------------------------------------------------------ */
+.glow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	opacity: .4;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 39%;
+		height: 100%;
+		box-shadow: 0px 0px 44px rgba(2, 239, 163, 0.905512);
+		border-radius: 166px;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 66%;
+		height: 100%;
+		box-shadow: 0px 0px 44px rgba(2, 239, 163, 0.905512);
+		border-radius: 166px;
+	}
+
+	span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 99.21%;
+		height: 100%;
+		transform: translate(-50%, -50%);
+		box-shadow: 0px 0px 55px rgba(113, 60, 228, 0.602163);
+		border-radius: 166px;
+	}
+
+	span:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 98.58%;
+		height: 100%;
+		transform: translate(-50%, -50%);
+		box-shadow: 0px 0px 74px rgba(15, 81, 250, 0.64546);
+		border-radius: 307px;
+	}
+
+	span:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 6.284%;
+		width: 53.495%;
+		height: 100%;
+		box-shadow: 0px 0px 55px rgba(113, 60, 228, 0.602163);
+		border-radius: 166px;
+	}
+}

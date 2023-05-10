@@ -1,0 +1,286 @@
+/* ------------------------------------------------------------ *\
+	tile
+\* ------------------------------------------------------------ */
+.tile {
+	padding-bottom: 88px;
+
+	@include breakpoint-down(small-desktop) {
+		padding-bottom: 40px;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding-bottom: 88px;
+	}
+
+	h2 {
+		font-weight: 400;
+		margin-bottom: 32px;
+		width: 100%;
+		max-width: 100%;
+		flex: 0 1 auto;
+		max-height: 100%;
+	}
+
+	figure {
+		margin-bottom: 44px;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.tile__content {
+		width: 100%;
+		max-width: 410px;
+		min-height: 193px;
+		display: flex;
+		flex-direction: column;
+
+		@include breakpoint-down(small-desktop) {
+			min-height: 0;
+		}
+
+		@include breakpoint-down(mobile) {
+			min-height: 193px;
+			max-width: none;
+		}
+	}
+
+	.tile__foot {
+		margin-top: auto;
+		display: flex;
+		width: 100%;
+		max-width: 100%;
+		flex: 0 1 auto;
+		max-height: 100%;
+
+		@include breakpoint-down(mobile) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	.tile__foot h4 {
+		color: #797d84;
+		margin-bottom: 0;
+		font-weight: 400;
+		text-transform: uppercase;
+		font-family: $ff-serif;
+	}
+
+	.tile__foot a {
+		margin-left: 32px;
+		font-family: $ff-serif;
+		text-transform: uppercase;
+	}
+
+	.tile__foot svg {
+		margin-left: 32px;
+	}
+}
+
+/*  tile--reverse  */
+.tile--reverse {
+	padding-bottom: 0;
+
+	h2 {
+		margin-bottom: 34px;
+	}
+
+	figure {
+		margin-bottom: 29px;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 33px;
+		}
+	}
+
+	.tile__foot a {
+		margin-left: 44px;
+		color: #797d84;
+	}
+
+	.tile__foot {
+		justify-content: flex-start;
+	}
+
+	.tile__content {
+		@include breakpoint-down(mobile) {
+			min-height: 0;
+		}
+	}
+}
+
+/*  tile--article  */
+.tile--article {
+	display: flex;
+	padding-bottom: 64px;
+
+	@include breakpoint-down(small-desktop) {
+		padding-bottom: 42px;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding-bottom: 64px;
+		display: block;
+	}
+
+	h2 {
+		font-weight: 700;
+		margin-bottom: 44px;
+
+		@include breakpoint-down(small-desktop) {
+			font-size: 32px;
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: 62px;
+		}
+	}
+
+	figure {
+		position: relative;
+		width: 100%;
+		max-width: 843px;
+		flex: 1 1 0%;
+		max-height: 100%;
+		top: -73px;
+		margin-bottom: -73px;
+		align-self: flex-start;
+		order: 99;
+
+		@include breakpoint-down(mobile) {
+			top: 0;
+			margin-bottom: 45px;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 101vw;
+			min-width: 320px;
+			max-width: none;
+		}
+	}
+
+	figure img {
+		width: 100%;
+		position: relative;
+	}
+
+	.tile__content {
+		padding: 20px 0 35px;
+		flex: 0 1 410px;
+		max-height: 100%;
+		align-self: center;
+		margin-right: 19px;
+
+		@include breakpoint-down(small-desktop) {
+			max-width: 30%;
+		}
+
+		@include breakpoint-down(mobile) {
+			max-width: none;
+			padding: 0;
+		}
+	}
+
+	.tile__foot {
+		justify-content: flex-start;
+	}
+
+	.tile__foot h4+h4 {
+		margin-left: 24px;
+	}
+}
+
+/*  tile--lg  */
+.tile--lg {
+	display: flex;
+	padding-bottom: 88px;
+
+	@include breakpoint-down(small-desktop) {
+		padding-bottom: 40px;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding-bottom: 88px;
+		display: block;
+	}
+
+	h2 {
+		font-weight: 700;
+		margin-bottom: 44px;
+
+		@include breakpoint-down(small-desktop) {
+			font-size: 32px;
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: 62px;
+		}
+	}
+
+	figure {
+		position: relative;
+		width: 100%;
+		max-width: 843px;
+		flex: 1 1 0%;
+		max-height: 100%;
+		top: -73px;
+		margin-bottom: -73px;
+		align-self: flex-start;
+		order: 99;
+
+		@include breakpoint-down(mobile) {
+			top: 0;
+			margin-bottom: 46px;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 101vw;
+			min-width: 320px;
+			max-width: none;
+		}
+	}
+
+	figure img {
+		width: 100%;
+		position: relative;
+	}
+
+	.tile__content {
+		flex: 0 1 410px;
+		max-height: 100%;
+		align-self: flex-end;
+		margin-top: auto;
+		margin-right: 19px;
+		padding-top: 20px;
+
+		@include breakpoint-down(small-desktop) {
+			max-width: 40%;
+		}
+
+		@include breakpoint-down(mobile) {
+			max-width: none;
+			padding-top: 0;
+		}
+	}
+}
+
+/*  tile--sm  */
+.tile--sm {
+	h2 {
+		font-weight: 700;
+	}
+
+	figure {
+		position: relative;
+	}
+
+	img {
+		position: relative;
+	}
+
+	.tile__content {
+		display: block;
+	}
+}

@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------ *\
+	Fields
+\* ------------------------------------------------------------ */
+.field {
+	margin-bottom: 24px;
+	width: 100%;
+	border-radius: 100px 100px;
+	font: inherit;
+	color: #212325;
+	border: 1px solid #797d84;
+	transition: transform .3s ease-out, border-color .3s ease-out, border-radius .3s ease-out, max-width .3s ease-out, max-height .3s ease-out, background-color .3s ease-out, box-shadow .3s ease-out, color .3s ease-out, opacity .3s ease-out, visibility .3s ease-out;
+	padding: 16px 22px;
+	appearance: none;
+	background-color: #f7f7f7;
+	box-shadow: 1px 1px 2px 0px transparent, 1px 1px 2px 0px transparent inset;
+
+	@include breakpoint-down(small-desktop) {
+		padding: 8px 11px;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 15px 19px;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: rgba(15, 81, 250, 1);
+		background-color: #fff;
+		box-shadow: 1px 1px 2px 0px rgba(15, 81, 250, 0.5), 1px 1px 2px 0px rgba(15, 81, 250, 0.5) inset;
+	}
+
+	&::placeholder {
+		color: #797d84;
+	}
+}
+
+/*  Field textarea  */
+.field--textarea {}
