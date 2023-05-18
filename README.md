@@ -1,6 +1,6 @@
 # Live Demo
 
-https://mppanayotov-elan.surge.sh/
+https://mppanayotov-elan.surge.sh
 
 # Task Runner
 
